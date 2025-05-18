@@ -6,3 +6,6 @@ steps:
       - |
         pip install -r requirements.txt
         pytest
+options: # 👈 Must be at root level, not indented under steps
+  serviceAccount: 'projects/fourth-archive-432009-n1/serviceAccounts/google-jupyter@fourth-archive-432009-n1.iam.gserviceaccount.com'
+  logging: CLOUD_LOGGING_ONLY
