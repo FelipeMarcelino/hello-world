@@ -11,6 +11,7 @@ pkgs.mkShell {
   buildInputs = [
     pythonPackages.python
     pythonPackages.venvShellHook
+    pythonPackages.pytest
   ];
   venvDir = "./.venv";
   postVenvCreation = ''
