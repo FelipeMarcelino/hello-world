@@ -1,8 +1,13 @@
 trigger:
   branches:
-    include: [main]
+    include:
+      - main # 👈 Fix list formatting
 jobs:
-- job: Test
-  pool: vmImage: 'ubuntu-latest'
-  steps:
-  - script: pip install -r requirements.txt && python -m pytest tests
+  - job: Test
+    pool:
+      vmImage: 'ubuntu-latest' # 👈 Proper indentation
+    steps:
+      - script: |
+          pip install -r requirements.txt
+          python -m pytest tests/
+        displayName: 'Run tests'
