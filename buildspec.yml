@@ -5,4 +5,4 @@ phases:
       - pip install -r requirements.txt
   build:
     commands:
-      - pytest
+      - python -m pytest tests/
